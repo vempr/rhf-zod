@@ -5,7 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import { SubmitHandler, useForm } from "react-hook-form";
 import axios from "axios";
 import { nanoid } from "nanoid";
-import useGeoLocation from "@custom-react-hooks/use-geo-location";
+// import useGeoLocation from "@custom-react-hooks/use-geo-location";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
@@ -48,22 +48,25 @@ export default function App() {
 		resolver: zodResolver(UserInputSchema),
 	});
 
-	const { coordinates } = useGeoLocation();
+	// const { coordinates } = useGeoLocation();
 
 	const [submitSuccessful, setSubmitSuccessful] = useState(false);
 
 	const onSubmit: SubmitHandler<UserInputType> = (data) => {
 		const newId: IDType = nanoid();
 
-		if (coordinates) {
+		if (1 === 1) {
+			// if (coordinates)
 			const finalData: UserFullType = {
 				...data,
 				id: newId,
 				address: {
 					...data.address,
 					geo: {
-						lat: String(coordinates.latitude),
-						lng: String(coordinates.longitude),
+						lat: "0",
+						lng: "0",
+						// lat: String(coordinates.latitude),
+						// lng: String(coordinates.longitude),
 					},
 				},
 			};
