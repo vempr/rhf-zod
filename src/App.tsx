@@ -103,7 +103,7 @@ export default function App() {
 	return (
 		<div className="flex flex-col items-center min-h-screen font-sans tracking-tight bg-neutral-900 text-white">
 			<div className="animate-fade">
-				<h1 className="text-2xl text-center font-medium mt-5 mb-3">
+				<h1 className="text-2xl text-center font-medium mt-5 mb-8">
 					react-hook-form <span className="text-red-500">w/</span>{" "}
 					zod!
 				</h1>
